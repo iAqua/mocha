@@ -76,15 +76,15 @@ static int split_string(const char *string, char splitChar, char *left, char *ri
 void default_config(cfw_config_t * config)
 {
     memset(config, 0, sizeof(cfw_config_t));
-    config->viewMode = 0;
-    config->directLaunch = 0;
+    config->viewMode = 1;
+    config->directLaunch = 1;
     config->launchImage = 1;
     config->noIosReload = 0;
     config->launchSysMenu = 1;
-    config->redNAND = 0;
-    config->seeprom_red = 0;
-    config->otp_red = 0;
-    config->syshaxXml = 0;
+    config->redNAND = 1;
+    config->seeprom_red = 1;
+    config->otp_red = 1;
+    config->syshaxXml = 1;
 }
 
 int read_config(cfw_config_t * config)
