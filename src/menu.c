@@ -56,7 +56,7 @@ struct {
     { "SEEPROM redirection", "on", "off" },
     { "OTP redirection", "on", "off" },
     { "Use syshax.xml (coldboothax)", "on", "off" },
-    { "Block Updates", "yes", "no" },
+    { "Block Updates", "on", "off" },
 };
 
 static void console_print_pos(int x, int y, const char *format, ...)
