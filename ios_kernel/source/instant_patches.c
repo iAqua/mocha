@@ -81,6 +81,11 @@ void instant_patches_setup(void)
         *(volatile u32*)(0x050BC580 - 0x05000000 + 0x081C0000) = 0;
         // down display launch image at this state
         *(volatile u32*)(_text_start - 4 - 0x05100000 + 0x13D80000) = 0;
+		
+		// run vWii mode using OSv1 instead of OSv0
+		*(volatile u32*)(0x050623C4 - 0x05000000 + 0x081C0000) = 0x10004001;
+		*(volatile u32*)(0x0506240C - 0x05000000 + 0x081C0000) = 0x10004001;
+		
 
         ios_map_shared_info_t map_info;
         map_info.paddr = 0x050BD000 - 0x05000000 + 0x081C0000;
